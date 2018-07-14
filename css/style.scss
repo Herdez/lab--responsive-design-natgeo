@@ -1,0 +1,169 @@
+$yellow-color: #fecd2f;
+
+@mixin main-grid {       
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #333333; 
+}
+
+@mixin title-fonts {
+    font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+}
+
+
+* {
+    outline: 1px solid red;
+}
+
+body{
+    margin: 0;
+}
+
+
+.main-grid{
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.section {
+    &__first {
+        padding: 0;
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    &__second {
+        padding: 0;
+        margin-left: 30px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    &__link {
+        text-decoration-color: $yellow-color;
+    }
+    &__third {
+        padding: 0;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+    &__third-image {
+        width: 320px;
+        position: relative;
+        left: 10%;
+        width: 257px;
+        bottom: 15px;
+    }
+    &__image {
+        width: 100%;
+    }
+}
+
+.main-grid{
+    @include main-grid();
+    .grid{
+        width: 100%;
+        padding: 5px;
+        /*border: 1px solid white;*/
+        border-radius: 3px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        &__secondary {
+            outline: 1px solid white;
+            width: 50%;
+            position: relative;
+            left: 25%;
+        }
+        &__title {
+            @include title-fonts();
+            color: white;
+            font-size: 22px;
+            text-align: center;
+        }
+        &__span {
+            position: relative;
+            left: 30%;
+            .fa-twitter {
+                color: blue;
+                font-size: 30px;
+                margin-right: 15px;
+            }
+            .fa-facebook {
+                color: #1A5276;
+                font-size: 30px;
+                margin-right: 15px;
+            }
+            .fa-camera {
+                color: #2874A6;
+                font-size: 30px;
+                margin-right: 15px;
+            }
+        }
+        &__content {
+                color: white;
+                text-align: center;
+        }
+        &__link {
+                font-weight: bold;
+                color: white;
+                position: relative;
+                left: 45%;
+                text-decoration-color: $yellow-color;
+        }
+    
+    }
+}
+
+
+@media screen and (min-width: 1023px){
+    .main-grid{
+        @include main-grid();
+        .grid{
+            width: 45%;
+        }
+    }
+    /*
+    body {
+        background-color: blue;
+    }*/
+}
+
+@media screen and (min-width: 768px){
+    .section__second {
+        padding: 0;
+        margin-left: 245px;
+        margin-right: 332px;
+        .section__link:visited {
+            color: black;
+        }
+    }
+    .section__third {
+        margin-left: 245px;
+        margin-right: 332px;
+        padding-top: 27px;
+        .section__third-image {
+            width: 638px;
+            position: relative;
+            bottom: 27px;
+            left: 90px;
+            .section__image {
+                width: 100%;
+            }
+        }
+    }
+    .main-grid{
+        /*background-color: #333333;
+        margin-right: 849px;*/
+        @include main-grid();
+        .grid{
+            width: 23%;
+        }
+    }
+    /*
+    body {
+        background-color: green;
+    }*/
+}
+
