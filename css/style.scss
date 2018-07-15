@@ -8,24 +8,89 @@ $yellow-color: #fecd2f;
     background-color: #333333; 
 }
 
+@mixin main-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+}
+
+@mixin main-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+    background-color: #aaaaaa;    
+}
+
 @mixin title-fonts {
     font-family: 'Gill Sans', 'Century Gothic', sans-serif;
 }
 
-
+/*
 * {
     outline: 1px solid red;
-}
+}*/
 
 body{
     margin: 0;
+    font-style: normal;
 }
 
 
-.main-grid{
+.main-grid {
     padding: 0;
     margin-left: 30px;
     margin-right: 50px;
+}
+
+.main-photos {
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.main-footer {
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 50px;    
+}
+
+.line {
+    color: grey;
+    margin-top: 13px;
+}
+
+.icon {
+    color: red;
+}
+
+
+.main-header {
+    display: flex;
+    height: 39px;
+    padding-top: 12px;
+    .header {
+        &__logo {
+            width: 40%;
+        }
+        &__image {
+            width: 140px;
+        }
+        &__text {
+            width: 15%;
+        }
+        &__font {
+            display: none;
+        }
+        &__icon {
+            color: grey;
+            position: relative;
+            left: 33px;
+            top: 14px;
+            font-size: 23px;
+        }
+    } 
 }
 
 .section {
@@ -35,14 +100,28 @@ body{
         margin-right: 50px;
         margin-bottom: 30px;
     }
+    &__button {
+        background-color: $yellow-color;
+        border: 1px solid black;
+        position: relative;
+        margin-bottom: 13px;
+        width: 100%;
+        height: 30px;
+    }
     &__second {
         padding: 0;
         margin-left: 30px;
         margin-right: 50px;
         margin-bottom: 30px;
     }
+    &__photo {
+        font-size: 19px;
+    }
     &__link {
         text-decoration-color: $yellow-color;
+    }
+    &__link:visited {
+        color: black;
     }
     &__third {
         padding: 0;
@@ -50,14 +129,35 @@ body{
         margin-right: 50px;
     }
     &__third-image {
-        width: 320px;
         position: relative;
-        left: 10%;
-        width: 257px;
+        width: 240px;
         bottom: 15px;
     }
     &__image {
         width: 100%;
+    }
+    &__title {
+        font-size: 27px;
+    }
+}
+
+.main-photos {
+    @include main-photos();
+    .photo {
+        width: 100%;
+        padding: 5px;
+        /*border: 1px solid white;*/
+        border-radius: 3px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+        &__image {
+            width: 100%;
+        }
+        &__title {
+            font-weight: bold;
+            margin-top: -22px;
+        }
     }
 }
 
@@ -116,6 +216,36 @@ body{
     }
 }
 
+.main-footer {
+    @include main-footer();
+    .footer {
+        &__first {
+            width: 81%;
+            padding: 10px;
+            margin: 17px;
+        }
+        &__news {
+            font-size: 19px;
+        }
+        &__input {
+            height: 18px;
+            width: 92px;
+        }
+        &__button {
+            border-radius: 0px;
+            background-color: $yellow-color;
+        }
+        &__second {
+            width: 70%;
+            padding: 10px;
+            margin: 17px;
+        }
+        &__text {
+            font-size: 19px;
+            margin-top: -23px;
+        }
+    }
+}
 
 @media screen and (min-width: 1023px){
     .main-grid{
@@ -131,12 +261,23 @@ body{
 }
 
 @media screen and (min-width: 768px){
+    .section__first {
+        .section__button {
+            width: 600px;
+            height: 40px;
+            left: 26%;
+            margin-bottom: 50px;
+        }
+    }
     .section__second {
         padding: 0;
         margin-left: 245px;
         margin-right: 332px;
-        .section__link:visited {
-            color: black;
+        .section__photo {
+            font-size: 30px;
+        }
+        .section__title {
+            font-size: 60px;
         }
     }
     .section__third {
@@ -153,7 +294,27 @@ body{
             }
         }
     }
-    .main-grid{
+    .main-header {
+        .header__logo {
+            width: 60%;
+            .header__image {
+                width: 137px;
+            }
+        }
+        .header__text {
+            width: 15%;
+            .header__font {
+                display: block;
+                color: grey;
+                text-align: center;
+                border-left: 1px solid $yellow-color;
+            }
+            .header__icon {
+                display: none;
+            }
+        }
+    }
+    .main-grid {
         /*background-color: #333333;
         margin-right: 849px;*/
         @include main-grid();
@@ -161,6 +322,55 @@ body{
             width: 23%;
         }
     }
+    .main-photos {
+        @include main-photos();
+        margin-left: 276px;
+        margin-right: 383px;
+        .photo {
+            width: 47%;
+            .photo__image {
+                width: 100%;
+            }
+            .photo__title {
+                font-size: 20px;
+                margin-top: 0px;
+            }
+        }
+
+    }
+    .main-footer {
+        .footer__first {
+            width: 60%;
+            padding: 10px;
+            margin: 17px;
+            border-left: 1px solid grey;
+            .footer__news {
+                font-size: 29px;
+            }
+            .footer__input {
+                height: 25px;
+                width: 129px;
+            }
+            .footer__button {
+                height: 26px
+            }
+        }
+        .footer__second {
+            width: 30%;
+            height: 50px;
+            margin-top: 50px;
+            border-left: 1px solid grey;
+            .footer__text {
+                margin-top: 0px;
+                font-size: 29px;
+            }
+        }
+    }
+
+    .line {
+        margin-top: 10px;
+    }
+
     /*
     body {
         background-color: green;
