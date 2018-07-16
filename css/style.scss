@@ -105,7 +105,7 @@ body{
         border: 1px solid black;
         position: relative;
         margin-bottom: 13px;
-        width: 100%;
+        width: 90%;
         height: 30px;
     }
     &__second {
@@ -130,8 +130,9 @@ body{
     }
     &__third-image {
         position: relative;
-        width: 240px;
+        width: 91%;
         bottom: 15px;
+        left: 4%;
     }
     &__image {
         width: 100%;
@@ -247,20 +248,8 @@ body{
     }
 }
 
-@media screen and (min-width: 1023px){
-    .main-grid{
-        @include main-grid();
-        .grid{
-            width: 45%;
-        }
-    }
-    /*
-    body {
-        background-color: blue;
-    }*/
-}
+@media screen and (min-width: 1024px){
 
-@media screen and (min-width: 768px){
     .section__first {
         .section__button {
             width: 600px;
@@ -271,8 +260,7 @@ body{
     }
     .section__second {
         padding: 0;
-        margin-left: 245px;
-        margin-right: 332px;
+        margin-left: 19%;
         .section__photo {
             font-size: 30px;
         }
@@ -281,8 +269,7 @@ body{
         }
     }
     .section__third {
-        margin-left: 245px;
-        margin-right: 332px;
+        margin-left: 19%;
         padding-top: 27px;
         .section__third-image {
             width: 638px;
@@ -319,7 +306,7 @@ body{
         margin-right: 849px;*/
         @include main-grid();
         .grid{
-            width: 23%;
+            width: 22%;
         }
     }
     .main-photos {
@@ -327,7 +314,7 @@ body{
         margin-left: 276px;
         margin-right: 383px;
         .photo {
-            width: 47%;
+            width: 44%;
             .photo__image {
                 width: 100%;
             }
@@ -340,7 +327,7 @@ body{
     }
     .main-footer {
         .footer__first {
-            width: 60%;
+            width: 57%;
             padding: 10px;
             margin: 17px;
             border-left: 1px solid grey;
@@ -371,9 +358,111 @@ body{
         margin-top: 10px;
     }
 
-    /*
-    body {
-        background-color: green;
-    }*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .section__first {
+        .section__button {
+            width: 500px;
+            height: 40px;
+            left: 19%;
+            margin-bottom: 50px;
+        }
+    }
+    .section__second {
+        padding: 0;
+        margin-left: 70px;
+        margin-right: 332px;
+        .section__photo {
+            font-size: 30px;
+        }
+        .section__title {
+            font-size: 60px;
+        }
+    }
+    .section__third {
+        padding-top: 27px;
+        .section__third-image {
+            width: 80%;
+            position: relative;
+            bottom: 27px;
+            left: 90px;
+            .section__image {
+                width: 100%;
+            }
+        }
+    }
+    .main-header {
+        .header__logo {
+            width: 60%;
+            .header__image {
+                width: 137px;
+            }
+        }
+        .header__text {
+            width: 15%;
+            .header__font {
+                display: none;
+                color: grey;
+                text-align: center;
+                border-left: 1px solid $yellow-color;
+            }
+        }
+    }
+    .main-grid {
+        @include main-grid();
+        .grid{
+            width: 46%;
+        }
+    }
+    .main-photos {
+        @include main-photos();
+        margin-left: 67px;
+        width: 83%;
+        .photo {
+            width: 47%;
+            .photo__image {
+                width: 100%;
+            }
+            .photo__title {
+                font-size: 20px;
+                margin-top: 0px;
+            }
+        }
+
+    }
+    .main-footer {
+        .footer__first {
+            width: 50%;
+            padding: 10px;
+            margin: 17px;
+            border-left: 1px solid grey;
+            .footer__news {
+                font-size: 29px;
+            }
+            .footer__input {
+                height: 25px;
+                width: 129px;
+            }
+            .footer__button {
+                height: 26px
+            }
+        }
+        .footer__second {
+            width: 30%;
+            height: 50px;
+            margin-top: 50px;
+            border-left: 1px solid grey;
+            .footer__text {
+                margin-top: 0px;
+                font-size: 29px;
+            }
+        }
+    }
+
+    .line {
+        margin-top: 10px;
+    }
+
 }
 

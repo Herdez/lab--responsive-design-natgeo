@@ -58,7 +58,7 @@ body {
   border: 1px solid black;
   position: relative;
   margin-bottom: 13px;
-  width: 100%;
+  width: 90%;
   height: 30px; }
 
 .section__second {
@@ -83,8 +83,9 @@ body {
 
 .section__third-image {
   position: relative;
-  width: 240px;
-  bottom: 15px; }
+  width: 91%;
+  bottom: 15px;
+  left: 4%; }
 
 .section__image {
   width: 100%; }
@@ -185,21 +186,7 @@ body {
     font-size: 19px;
     margin-top: -23px; }
 
-@media screen and (min-width: 1023px) {
-  .main-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #333333; }
-    .main-grid .grid {
-      width: 45%; }
-  /*
-    body {
-        background-color: blue;
-    }*/ }
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .section__first .section__button {
     width: 600px;
     height: 40px;
@@ -207,15 +194,13 @@ body {
     margin-bottom: 50px; }
   .section__second {
     padding: 0;
-    margin-left: 245px;
-    margin-right: 332px; }
+    margin-left: 19%; }
     .section__second .section__photo {
       font-size: 30px; }
     .section__second .section__title {
       font-size: 60px; }
   .section__third {
-    margin-left: 245px;
-    margin-right: 332px;
+    margin-left: 19%;
     padding-top: 27px; }
     .section__third .section__third-image {
       width: 638px;
@@ -246,7 +231,7 @@ body {
     justify-content: space-between;
     background-color: #333333; }
     .main-grid .grid {
-      width: 23%; }
+      width: 22%; }
   .main-photos {
     display: flex;
     flex-direction: row;
@@ -255,14 +240,14 @@ body {
     margin-left: 276px;
     margin-right: 383px; }
     .main-photos .photo {
-      width: 47%; }
+      width: 44%; }
       .main-photos .photo .photo__image {
         width: 100%; }
       .main-photos .photo .photo__title {
         font-size: 20px;
         margin-top: 0px; }
   .main-footer .footer__first {
-    width: 60%;
+    width: 57%;
     padding: 10px;
     margin: 17px;
     border-left: 1px solid grey; }
@@ -282,8 +267,83 @@ body {
       margin-top: 0px;
       font-size: 29px; }
   .line {
-    margin-top: 10px; }
-  /*
-    body {
-        background-color: green;
-    }*/ }
+    margin-top: 10px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section__first .section__button {
+    width: 500px;
+    height: 40px;
+    left: 19%;
+    margin-bottom: 50px; }
+  .section__second {
+    padding: 0;
+    margin-left: 70px;
+    margin-right: 332px; }
+    .section__second .section__photo {
+      font-size: 30px; }
+    .section__second .section__title {
+      font-size: 60px; }
+  .section__third {
+    padding-top: 27px; }
+    .section__third .section__third-image {
+      width: 80%;
+      position: relative;
+      bottom: 27px;
+      left: 90px; }
+      .section__third .section__third-image .section__image {
+        width: 100%; }
+  .main-header .header__logo {
+    width: 60%; }
+    .main-header .header__logo .header__image {
+      width: 137px; }
+  .main-header .header__text {
+    width: 15%; }
+    .main-header .header__text .header__font {
+      display: none;
+      color: grey;
+      text-align: center;
+      border-left: 1px solid #fecd2f; }
+  .main-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #333333; }
+    .main-grid .grid {
+      width: 46%; }
+  .main-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 67px;
+    width: 83%; }
+    .main-photos .photo {
+      width: 47%; }
+      .main-photos .photo .photo__image {
+        width: 100%; }
+      .main-photos .photo .photo__title {
+        font-size: 20px;
+        margin-top: 0px; }
+  .main-footer .footer__first {
+    width: 50%;
+    padding: 10px;
+    margin: 17px;
+    border-left: 1px solid grey; }
+    .main-footer .footer__first .footer__news {
+      font-size: 29px; }
+    .main-footer .footer__first .footer__input {
+      height: 25px;
+      width: 129px; }
+    .main-footer .footer__first .footer__button {
+      height: 26px; }
+  .main-footer .footer__second {
+    width: 30%;
+    height: 50px;
+    margin-top: 50px;
+    border-left: 1px solid grey; }
+    .main-footer .footer__second .footer__text {
+      margin-top: 0px;
+      font-size: 29px; }
+  .line {
+    margin-top: 10px; } }
