@@ -1,0 +1,32 @@
+@mixin main {
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 50px;    
+}
+
+@mixin main-grid {       
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #333333; 
+}
+
+@mixin main-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+}
+
+@mixin main-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+    background-color: #aaaaaa;    
+}
+
+@mixin title-fonts {
+    font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+}

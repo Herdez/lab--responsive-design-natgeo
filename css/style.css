@@ -1,11 +1,8 @@
-/*
-* {
-    outline: 1px solid red;
-}*/
 body {
   margin: 0;
   font-style: normal; }
 
+/*Mobile*/
 .main-grid {
   padding: 0;
   margin-left: 30px;
@@ -24,9 +21,6 @@ body {
 .line {
   color: grey;
   margin-top: 13px; }
-
-.icon {
-  color: red; }
 
 .main-header {
   display: flex;
@@ -101,7 +95,6 @@ body {
   .main-photos .photo {
     width: 100%;
     padding: 5px;
-    /*border: 1px solid white;*/
     border-radius: 3px;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -121,7 +114,6 @@ body {
   .main-grid .grid {
     width: 100%;
     padding: 5px;
-    /*border: 1px solid white;*/
     border-radius: 3px;
     margin-bottom: 10px;
     margin-right: 10px; }
@@ -186,6 +178,7 @@ body {
     font-size: 19px;
     margin-top: -23px; }
 
+/*Desktop*/
 @media screen and (min-width: 1024px) {
   .section__first .section__button {
     width: 600px;
@@ -223,8 +216,6 @@ body {
     .main-header .header__text .header__icon {
       display: none; }
   .main-grid {
-    /*background-color: #333333;
-        margin-right: 849px;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -269,6 +260,7 @@ body {
   .line {
     margin-top: 10px; } }
 
+/*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .section__first .section__button {
     width: 500px;

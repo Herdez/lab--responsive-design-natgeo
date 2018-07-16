@@ -1,68 +1,28 @@
-$yellow-color: #fecd2f;
-
-@mixin main-grid {       
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #333333; 
-}
-
-@mixin main-photos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;   
-}
-
-@mixin main-footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;   
-    background-color: #aaaaaa;    
-}
-
-@mixin title-fonts {
-    font-family: 'Gill Sans', 'Century Gothic', sans-serif;
-}
-
-/*
-* {
-    outline: 1px solid red;
-}*/
+@import "mixins";
+@import "vars";
 
 body{
     margin: 0;
     font-style: normal;
 }
 
+/*Mobile*/
 
 .main-grid {
-    padding: 0;
-    margin-left: 30px;
-    margin-right: 50px;
+    @include main();
 }
 
 .main-photos {
-    padding: 0;
-    margin-left: 30px;
-    margin-right: 50px;
+    @include main();
 }
 
 .main-footer {
-    padding: 0;
-    margin-left: 30px;
-    margin-right: 50px;    
+    @include main();
 }
 
 .line {
     color: grey;
     margin-top: 13px;
-}
-
-.icon {
-    color: red;
 }
 
 
@@ -147,7 +107,6 @@ body{
     .photo {
         width: 100%;
         padding: 5px;
-        /*border: 1px solid white;*/
         border-radius: 3px;
         margin-bottom: 10px;
         margin-right: 10px;
@@ -167,7 +126,6 @@ body{
     .grid{
         width: 100%;
         padding: 5px;
-        /*border: 1px solid white;*/
         border-radius: 3px;
         margin-bottom: 10px;
         margin-right: 10px;
@@ -248,6 +206,8 @@ body{
     }
 }
 
+/*Desktop*/
+
 @media screen and (min-width: 1024px){
 
     .section__first {
@@ -302,8 +262,6 @@ body{
         }
     }
     .main-grid {
-        /*background-color: #333333;
-        margin-right: 849px;*/
         @include main-grid();
         .grid{
             width: 22%;
@@ -330,7 +288,7 @@ body{
             width: 57%;
             padding: 10px;
             margin: 17px;
-            border-left: 1px solid grey;
+            border-left: $grey-color;
             .footer__news {
                 font-size: 29px;
             }
@@ -346,20 +304,20 @@ body{
             width: 30%;
             height: 50px;
             margin-top: 50px;
-            border-left: 1px solid grey;
+            border-left: $grey-color;
             .footer__text {
                 margin-top: 0px;
                 font-size: 29px;
             }
         }
     }
-
     .line {
         margin-top: 10px;
     }
 
 }
 
+/*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .section__first {
         .section__button {
@@ -436,7 +394,7 @@ body{
             width: 50%;
             padding: 10px;
             margin: 17px;
-            border-left: 1px solid grey;
+            border-left: $grey-color;
             .footer__news {
                 font-size: 29px;
             }
@@ -452,14 +410,13 @@ body{
             width: 30%;
             height: 50px;
             margin-top: 50px;
-            border-left: 1px solid grey;
+            border-left: $grey-color;
             .footer__text {
                 margin-top: 0px;
                 font-size: 29px;
             }
         }
     }
-
     .line {
         margin-top: 10px;
     }
